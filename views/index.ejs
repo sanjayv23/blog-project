@@ -6,13 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/" method="POST">
-        <input type="text" name="content" required>
-        <input type="submit" value="Submit">
+    <form action="/add-post" method="POST">
+        <input type="text" name="post" placeholder="Write your post here" required>
+        <button type="submit">Submit</button>
     </form>
-    <h1>message:<%for(let j=0;j<prevmessage.length;j++){%>
+    <h1>Post:<%for(let j=0;j<posts.length;j++){%>
         <ul>
-            <li><%= prevmessage[j] %></li>
+            <li><%=posts[j].content %></li>
+            <form action="/delete-post" method="POST">
+                <input type="hidden" name="postId" value="<%= posts[j].id%>">
+                <button type="submit">Delete</button>
+            </form>
+            <form action="/update-post" method="POST">
+                <input type="hidden" name="postId" value="<%= posts[j].id%>">
+                <button type="submit">Update</button>
+            </form>
+
+                
+            
+            
         </ul>
     <% } %>
 </h1>
