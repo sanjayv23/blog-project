@@ -28,11 +28,18 @@ app.post("/add-post", (req, res) => {
 });
 app.post("/delete-post",(req,res)=>{
     const postId=req.body["postId"]
-    posts = posts.filter(post => post["id"] !== postId);
+    posts = posts.filter(sanjay => sanjay["id"] !== postId);
     res.redirect("/")
 })
+app.
 app.post("/update-post",(req,res)=>{
-    const postId=req.body["postId"]
+    const updatepostId=req.body["updatepostId"]
+    const updatepostContent=posts.filter(post => post["id"] === updatepostId);
+    console.log(updatepostContent);
+    posts = posts.filter(post => post["id"] !== updatepostId);
+    res.render("update.ejs",{updatepostId:updatepostId,updatepostContent:updatepostContent,posts:posts})
+    
+    
 })
   
 app.listen(port,()=>{

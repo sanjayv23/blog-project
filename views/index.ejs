@@ -10,7 +10,7 @@
         <input type="text" name="post" placeholder="Write your post here" required>
         <button type="submit">Submit</button>
     </form>
-    <h1>Post:<%for(let j=0;j<posts.length;j++){%>
+    <h1>Post:<%for(let j=posts.length-1;j>=0;j--){%>
         <ul>
             <li><%=posts[j].content %></li>
             <form action="/delete-post" method="POST">
@@ -18,7 +18,7 @@
                 <button type="submit">Delete</button>
             </form>
             <form action="/update-post" method="POST">
-                <input type="hidden" name="postId" value="<%= posts[j].id%>">
+                <input type="hidden" name="updatepostId" value="<%= posts[j].id%>">
                 <button type="submit">Update</button>
             </form>
 
