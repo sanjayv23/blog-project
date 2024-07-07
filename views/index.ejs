@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="/add-post" method="POST">
-        <input type="text" name="post" placeholder="Write your post here" required>
-        <button type="submit">Submit</button>
-    </form>
+<%- include("partials/header.ejs") %>
+    <div class="mainform">
+        <form action="/add-post" method="POST" class="inputform">
+            <input type="text" name="post" placeholder="Write your post here..." required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
     <h1>Post:<%for(let j=posts.length-1;j>=0;j--){%>
         <ul>
             <li><%=posts[j].content %></li>
@@ -28,7 +23,5 @@
         </ul>
     <% } %>
 </h1>
-    
+<%- include("partials/footer.ejs") %>
 
-</body>
-</html>

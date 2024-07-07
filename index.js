@@ -7,7 +7,7 @@ const port=3000
 let posts=[];
 let i=0;
 let j=0;
-
+app.use(express.static("public"))
 app.use(bodyparser.urlencoded({extended: true}));
 
 app.get("/",(req,res)=>{
@@ -31,7 +31,7 @@ app.post("/delete-post",(req,res)=>{
     posts = posts.filter(sanjay => sanjay["id"] !== postId);
     res.redirect("/")
 })
-app.
+
 app.post("/update-post",(req,res)=>{
     const updatepostId=req.body["updatepostId"]
     const updatepostContent=posts.filter(post => post["id"] === updatepostId);

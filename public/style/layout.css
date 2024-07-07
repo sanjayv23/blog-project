@@ -1,0 +1,64 @@
+body{
+    background-color: rgba(0, 0, 0, 90%);
+    padding: 0 auto;
+    margin: 0 auto;
+    
+}
+
+.maintitle{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFC7C7;
+    
+
+}
+.maintitle img{
+    
+    
+    
+}
+.maintitle h1{
+    
+   
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-style: bold;
+    font-size: 48px;
+    
+    
+}
+.mainform{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.inputform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 70vw;
+    margin: 25px 10px;
+    border-radius:12px;
+    padding: 10px;
+    background-color: #FFC7C7;
+    height: 30vh;
+    
+
+}
+.inputform input{
+    font-family: "Playfair Display", serif;
+    height:20vh;
+    border: 2px solid #FFC7C7;
+    border-radius:12px ;
+}
+.inputform button{
+    margin-top: 10px;
+    width: fit-content;
+    align-self:flex-end;
+    border-radius:12px ;
+}
