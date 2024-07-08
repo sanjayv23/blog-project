@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="/add-post" method="POST">
-        <input type="text" name="post" placeholder="Write your updated post here" required>
-        <button type="submit">update post</button>
+<%- include("partials/header.ejs") %>
+    <form action="/add-post" method="POST" class="updateform">
+        <input type="text" name="post" placeholder="Write your updated post..." required>
+        <button type="submit" class="btn">update post</button>
         
 
 
     </form>
     
+<%- include("partials/footer.ejs") %>
+
     
-</body>
-</html>

@@ -4,36 +4,45 @@ body{
     margin: 0 auto;
     
 }
-
+/*----------------------------------------------------------------------------------------------------------------*/
 .maintitle{
     width: 100vw;
     height: 10vh;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    
     background-color: #FFC7C7;
     
 
 }
-.maintitle img{
-    
-    
-    
+.logo{
+    width:100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-.maintitle h1{
+.logo h1{
     
    
-    align-items: center;
     font-family: "Playfair Display", serif;
     font-style: bold;
     font-size: 48px;
-    
-    
 }
+
+.menu {
+    
+    width: fit-content;
+    height: 10vh;
+    display: flex;  
+}
+.menu img{
+    padding: 10px;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
 .mainform{
     display: flex;
-    flex-direction: row;
+   
     justify-content: center;
 }
 .inputform{
@@ -41,24 +50,191 @@ body{
     flex-direction: column;
     justify-content: center;
     
-    width: 70vw;
-    margin: 25px 10px;
+    width: 50vw;
+    
+    margin: 50px;
     border-radius:12px;
     padding: 10px;
     background-color: #FFC7C7;
-    height: 30vh;
+    height: 50vh;
     
 
 }
 .inputform input{
+    background-color:rgba(0, 0, 0, 100%);
     font-family: "Playfair Display", serif;
-    height:20vh;
+    height:100vh;
     border: 2px solid #FFC7C7;
-    border-radius:12px ;
+    border-radius:15px ;
+    font-size: 48px;
+    color: white;
+    
+    
 }
+
 .inputform button{
     margin-top: 10px;
     width: fit-content;
     align-self:flex-end;
-    border-radius:12px ;
+    border: 0px ;
+    padding: 5px 010px ;
+    border-radius:15px ;
+    background-color: black;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-style: medium;
+    font-size: 24px;
+
 }
+
+/*----------------------------------------------------------------------------------------------------------------*/
+.post{
+    font-family: "Playfair Display", serif;
+    font-style: bold;
+    color: white;
+    font-size: 35px;
+    padding: 10px;
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+.maincontent{
+    padding: 20px 10px;
+}
+.postdata{
+    background-color: #FFC7C7;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 10px 10px;
+}
+.postdata li{
+    background-color: rgb(0, 0, 0,100%);
+    padding: 20px;
+    letter-spacing:0.05cm;
+    border-radius: 15px;
+}
+.btn{
+    width:fit-content;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    
+    
+    border: 0px ;
+    padding: 5px 010px ;
+    border-radius:15px ;
+    background-color: black;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-style: medium;
+    font-size: 24px;
+
+   padding: 10px 10px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------*/
+.last{
+    background-color:#FFC7C7;
+    font-family: "Playfair Display", serif;
+    font-weight:bolder;
+   
+    font-size: 30px;
+    padding: 10px;
+    height: 10vh;
+
+}
+/*----------------------------------------------------------------------------------------------------------------*/
+ul {
+    position: relative;
+    list-style: none;
+  }
+  
+  li::before {
+    content: '▶';
+    position: absolute;
+    left: 5px;
+    color: #000;
+  }
+.updateform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    width: 50vw;
+    
+    margin-left:25vw;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border-radius:12px;
+    padding: 10px;
+    background-color: #FFC7C7;
+    height: 50vh;
+}
+.updateform input{
+    background-color:rgba(0, 0, 0, 100%);
+    font-family: "Playfair Display", serif;
+    height:100vh;
+    border: 2px solid #FFC7C7;
+    border-radius:15px ;
+    font-size: 48px;
+    color: white;
+    
+    
+}
+
+.updateform button{
+    margin-top: 10px;
+    width: fit-content;
+    align-self:flex-end;
+    border: 0px ;
+    padding: 5px 010px ;
+    border-radius:15px ;
+    background-color: black;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-style: medium;
+    font-size: 24px;
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .menu img{
+        align-self: self-start;
+        padding:5px;
+    }
+    .inputform{
+       
+        width: 80vw;
+        margin-top: 25px ;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius:12px;
+        padding: 10px;
+        background-color: #FFC7C7;
+        height: 40vh;
+        
+    
+    }
+    .inputform input{
+        font-weight: 500;
+        font-size: 24px;
+    }
+    .updateform{
+       
+        width: 80vw;
+        margin-top: 25px ;
+        margin-left:10vw;
+        
+        border-radius:12px;
+        padding: 10px;
+        background-color: #FFC7C7;
+        height: 40vh;
+        
+    
+    }
+    .updateform input{
+        font-weight: 500;
+        font-size: 24px;
+    }
+  }

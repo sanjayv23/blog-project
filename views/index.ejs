@@ -5,17 +5,23 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-    <h1>Post:<%for(let j=posts.length-1;j>=0;j--){%>
-        <ul>
-            <li><%=posts[j].content %></li>
-            <form action="/delete-post" method="POST">
+    <h1 class="post">RECENT POSTS:<%for(let j=posts.length-1;j>=0;j--){%>
+        <ul style="list-style-type:none;" class="postdata">
+            <div class="maincontent">
+                <li ><%=posts[j].content %></li>
+            <form action="/delete-post" method="POST" class="">
                 <input type="hidden" name="postId" value="<%= posts[j].id%>">
-                <button type="submit">Delete</button>
+                
+                    <button type="submit" class="btn">Delete</button>
+                
             </form>
             <form action="/update-post" method="POST">
                 <input type="hidden" name="updatepostId" value="<%= posts[j].id%>">
-                <button type="submit">Update</button>
+                
+                    <button type="submit" class="btn">Update</button>
+                
             </form>
+            </div>
 
                 
             
